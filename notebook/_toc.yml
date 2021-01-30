@@ -1,0 +1,9 @@
+# Table of content
+# Learn more at https://jupyterbook.org/customize/toc.html
+#
+- file: intro
+- file: content-01-alignment
+# - file: references
+#  sections:
+#    - file: markdown
+#    - file: notebooks

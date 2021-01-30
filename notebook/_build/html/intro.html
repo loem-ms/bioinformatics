@@ -1,0 +1,348 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction &#8212; Bioinformatics</title>
+    
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Sequence Alignment" href="content-01-alignment.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.jpg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Bioinformatics</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="#">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="content-01-alignment.html">
+   Sequence Alignment
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/intro.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bioinformatics">
+   Bioinformatics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aims-of-bioinformatics">
+   Aims of bioinformatics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bioinformatics-topics-and-data-sources">
+   Bioinformatics topics and Data sources
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#organism-as-a-hierarchical-information-system">
+   Organism as a hierarchical information system
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dna-gene-genome">
+   DNA, gene, genome
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dna">
+   DNA
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="bioinformatics">
+<h2>Bioinformatics<a class="headerlink" href="#bioinformatics" title="Permalink to this headline">¶</a></h2>
+<p>Bioinformatics is the science of collecting and analyzing complex biological data.
+It is not just an experimental data processing using a computer, but a process of applying informatics techniques:
+mathematical model, computer science and statistics, to present and analyze biological data.</p>
+<p><img alt="Figure 1" src="_images/Picture1.png" /></p>
+</div>
+<div class="section" id="aims-of-bioinformatics">
+<h2>Aims of bioinformatics<a class="headerlink" href="#aims-of-bioinformatics" title="Permalink to this headline">¶</a></h2>
+<p>There are three main aims of bioinformatics. Firstly, bioinformatics aims to organize data in a way that allows researchers to simply access and process existing information on a computer. An example of this kind of work is large biological database systems such as Protein Data Bank for 3D macromolecular structures. While data collecting and organizing is an essential task, the information stored in databases is useless until it is analyzed. Therefore the purpose of this field is far beyond mere volume control. Secondly, bioinformatics aims to develop tools that aid in data analysis. In this case, the development of mathematical modeling and efficient algorithms are critical research tasks. Thirdly, it aims to use these informatics tools to analyze biological data and interpret the results in a meaningful biological aspect.</p>
+</div>
+<div class="section" id="bioinformatics-topics-and-data-sources">
+<h2>Bioinformatics topics and Data sources<a class="headerlink" href="#bioinformatics-topics-and-data-sources" title="Permalink to this headline">¶</a></h2>
+<p><img alt="Figure 2" src="_images/Picture2-topics.png" /></p>
+</div>
+<div class="section" id="organism-as-a-hierarchical-information-system">
+<h2>Organism as a hierarchical information system<a class="headerlink" href="#organism-as-a-hierarchical-information-system" title="Permalink to this headline">¶</a></h2>
+<p><img alt="Figure 3" src="_images/Picture3-system.png" /></p>
+<p>Living things on earth can be understood as hierarchical information systems. This concept is known as system biology.
+The idea is that, in order to fully understand the complexity of life at all these different levels, we need to analyze the organization, interactions, and control of the many smaller components of a biological system in an integrated way. However, even consider a cell which is a basic component as a system, we still have difficulties since the internal structure is extremely complex and abundant in the number of types of partial components(about 25000 genes and 100000 proteins in the case of the human). As a result, it is hard to directly analyze the systems with physicochemical approaches. And it is a critical key to taking informatics techniques into account.</p>
+</div>
+<div class="section" id="dna-gene-genome">
+<h2>DNA, gene, genome<a class="headerlink" href="#dna-gene-genome" title="Permalink to this headline">¶</a></h2>
+<p>In bioinformatics, as shown in the previous section, the research topics are mainly focused on molecule aspects which is known as molecular biology. Keywords which are confusing in this area are DNA sequence, gene and genome.</p>
+<ul class="simple">
+<li><p><strong>DNA</strong> is a string of complex organic molecules called <a class="reference external" href="https://en.wikipedia.org/wiki/Nucleotide">nucleotides</a>. DNA contains the genetic information of life. It is a set of instructions to build and maintain life. DNA is unique(except identical twin) and mostly located in every human cell called nucleus (some found in mitochondria).</p></li>
+<li><p>If we consider DNA as a molecular instruction book, <strong>gene</strong>  a short section or little paragraph of DNA. Gene are instructions that cells use to make proteins.</p></li>
+<li><p>A <strong>genome</strong> is an organism’s complete set of DNA. If the DNA is a set of instructions that is organized into paragraph(which is gene) then the entire manual from the begining to the end would be the genome.</p></li>
+</ul>
+</div>
+<div class="section" id="dna">
+<h2>DNA<a class="headerlink" href="#dna" title="Permalink to this headline">¶</a></h2>
+<p>DNA = Deoxyribonucleic acid. It is a molecule composed of two polynucleotide chains that coil around each other. The information in DNA is stored as a code made up of four chemical bases: adenine (A), guanine (G), cytosine (C), and thymine (T). The order, or sequence, of these bases determines the information available for building and maintaining an organism. This feature is similar to the way in which letters of the alphabet appear in a certain order to form words. DNA bases pair up with each other to form units called base pairs (A with T and C with G). An crucial property of DNA is that it can make copies of itself(replication).</p>
+<p><img alt="Figure 4" src="_images/Picture4-atcg.png" /></p>
+<center>
+<a title="Zephyris, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:DNA_Structure%2BKey%2BLabelled.pn_NoBB.png"><img width="512" alt="DNA Structure+Key+Labelled.pn NoBB" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/DNA_Structure%2BKey%2BLabelled.pn_NoBB.png/512px-DNA_Structure%2BKey%2BLabelled.pn_NoBB.png"></a></center>
+<!--
+<center>
+<a title="brian0918, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:DNA_animation.gif"><img width="128" alt="DNA animation" src="https://upload.wikimedia.org/wikipedia/commons/0/0c/DNA_animation.gif"></a></center>
+-->
+<center><a title="LadyofHats, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:DNA_replication_en.svg"><img width="512" alt="DNA replication en" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/DNA_replication_en.svg/512px-DNA_replication_en.svg.png"></a></center>
+<p>[Figures from <a class="reference external" href="https://en.wikipedia.org/wiki/DNA">Wiki</a>]</p>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Luscombe, Nicholas &amp; Greenbaum, Dov &amp; Gerstein, Mark. (2000). What is bioinformatics? An introduction and overview. Yearbook of Medical Informatics. 10. 10.1055/s-0038-1638103.</p></li>
+<li><p>Bas E. Dutilh &amp; Can Keșmir (2016). Theoretical Biology and Bioinformatics.  Utrecht University.</p></li>
+<li><p>Arthur M. Lesk (2014).INTRODUCTION TO BIOINFORMATICS FOURTH EDITION. Oxford University Press</p></li>
+<li><p>Gabriella Beer (2018). Science surgery: “What’s the difference between the words genome, gene and chromosome?”. CANCER RESEARCH UK. <a class="reference external" href="https://scienceblog.cancerresearchuk.org/2018/05/29/science-surgery-whats-the-difference-between-the-words-genome-gene-and-chromosome/">[URL]</a></p></li>
+<li><p>What is DNA?. MedlinePlus. U.S. National Library of Medicine <a class="reference external" href="https://medlineplus.gov/genetics/understanding/basics/dna/">[DNA]</a> (Retrieved on 2021/01/31)</p></li>
+<li><p>DNA <a class="reference external" href="https://en.wikipedia.org/wiki/DNA">https://en.wikipedia.org/wiki/DNA</a></p></li>
+</ul>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='right-next' id="next-link" href="content-01-alignment.html" title="next page">Sequence Alignment</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Mengsay LOEM<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
