@@ -1,5 +1,6 @@
 Sequence Alignment
 ==================
+\[week1\]
 
 ## Individual differences in genome sequence
 
@@ -9,6 +10,15 @@ In genetics a single-nucleotide polymorphism (SNP: pronounced “snip”) is a s
 
 \[Figure from [gendai.ismedia.jp](https://gendai.ismedia.jp/articles/-/56804)\]
 
+## Sequence Alginment
+### Sequence Comparison
+### Alignment Score
+
+## Optimal Path Search Problem
+
+## Dynamic Programming
+
+## Local and Global Alignment
 
 ## References
 
