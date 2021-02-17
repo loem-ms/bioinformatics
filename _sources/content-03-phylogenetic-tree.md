@@ -1,3 +1,0 @@
-Phylogenetic Tree
-==================
-\[Week3\]

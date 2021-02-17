@@ -1,3 +1,0 @@
-Homology Search
-==================
-\[Week4\]
