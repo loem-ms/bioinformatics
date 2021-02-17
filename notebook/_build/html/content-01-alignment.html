@@ -192,6 +192,33 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Sequence Alignment
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sequence-comparison">
+     Sequence Comparison
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#alignment-score">
+     Alignment Score
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#optimal-path-search-problem">
+   Optimal Path Search Problem
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#local-and-global-alignment">
+   Local and Global Alignment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#references">
    References
   </a>
@@ -209,17 +236,43 @@
                 
   <div class="section" id="sequence-alignment">
 <h1>Sequence Alignment<a class="headerlink" href="#sequence-alignment" title="Permalink to this headline">¶</a></h1>
+<p>[week1]</p>
 <div class="section" id="individual-differences-in-genome-sequence">
 <h2>Individual differences in genome sequence<a class="headerlink" href="#individual-differences-in-genome-sequence" title="Permalink to this headline">¶</a></h2>
 <p>In genetics a single-nucleotide polymorphism (SNP: pronounced “snip”) is a substitution of a single nucleotide at a specific position in the genome. It is the most common type of genetic variation among organisms. It is known to occur once in every 1000 nucleotides. Most SNPs have no effect on health but they have proven to be very critical key to help predict an individual’s feature such as certain drugs responses or reactions. SNPs can also be important to track the inheritance of disease genes, and to study the association between complex diseases such as heart disease, diabetes, and cancer.</p>
 <p><img alt="Figure 1" src="_images/Picture1-geneexpression.png" /></p>
 <p>[Figure from <a class="reference external" href="https://gendai.ismedia.jp/articles/-/56804">gendai.ismedia.jp</a>]</p>
 </div>
+<div class="section" id="id1">
+<h2>Sequence Alignment<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>As mentioned before, genetic information can be presented as sequences of A,T,C,G. And like in case of SNP analysis, comparison between A,T,C,G sequences is one of essential process in bioinformatics which leads to deep understanding and interesting discovery between organisms or species.</p>
+<p>A <strong>Sequence Alignment</strong> is a process of arranging and comparing sequences of DNA or RNA or protein to find similarity.</p>
+<div class="section" id="sequence-comparison">
+<h3>Sequence Comparison<a class="headerlink" href="#sequence-comparison" title="Permalink to this headline">¶</a></h3>
+<p>In sequence comparison, abolute position of each character is compared. In a simple approach, counting number of matched and unmatched positions is used. However, in some application, representing the similarity as a numerical value is necessary. In that case, similarity score is used. In the following example, there are 3 matched positions and (+3)+(+3)+(-2)+(+3)=+7 of similarity score.</p>
+<p><img alt="sequence comparison" src="_images/sequence-comparison.png" /></p>
+</div>
+<div class="section" id="alignment-score">
+<h3>Alignment Score<a class="headerlink" href="#alignment-score" title="Permalink to this headline">¶</a></h3>
+<p>In alignment, we arrange the sequence pair to identify the similarity. In this case, gaps are added to sequences in order to optimize the comparison. To do this, we consider scoring method on match, unmatch and gap positions. This scoring method can be flexible based on feature of comparing sequences.</p>
+<p><img alt="alignment score" src="_images/alignment-score.png" /></p>
+<p>The sequence alignment can be presented as a graph model as shown in the following example.</p>
+<p><img alt="alignment gap" src="_images/alignment-gap.png" /></p>
+</div>
+</div>
+<div class="section" id="optimal-path-search-problem">
+<h2>Optimal Path Search Problem<a class="headerlink" href="#optimal-path-search-problem" title="Permalink to this headline">¶</a></h2>
+<p>Therefore, a problem of arrange sequences in sequence aligment can be considered as an optimal path search problem. Here, start node is the top left node of the graph model, and end node is the bottom right node. In this case, optimal path is the path with the maximum value of similarity score.</p>
+<p>To solve this problem, we can use a well-known algorithm in computer science field, <strong>Dynamic Programming</strong>.</p>
+<p><img alt="alignment DP" src="_images/alignment-DP.png" /></p>
+</div>
+<div class="section" id="local-and-global-alignment">
+<h2>Local and Global Alignment<a class="headerlink" href="#local-and-global-alignment" title="Permalink to this headline">¶</a></h2>
+</div>
 <div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>What are single nucleotide polymorphisms (SNPs)?. MedlinePlus. U.S. National Library of Medicine <a class="reference external" href="https://medlineplus.gov/genetics/understanding/genomicresearch/snp/">[SNP]</a>(Retrieved on 2021/01/31)</p></li>
-<li></li>
 </ul>
 </div>
 </div>
